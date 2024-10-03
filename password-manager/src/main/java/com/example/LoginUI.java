@@ -13,12 +13,12 @@ public class LoginUI {
     }
 
     public LoginUI() {
-        JFrame loginFrame = new JFrame("Login");
+        JFrame loginFrame = new JFrame("ログイン");
         loginFrame.setSize(300, 200);
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginFrame.setLayout(null);
 
-        JLabel userLabel = new JLabel("Username:");
+        JLabel userLabel = new JLabel("ID:");
         userLabel.setBounds(10, 10, 80, 25);
         loginFrame.add(userLabel);
 
@@ -26,7 +26,7 @@ public class LoginUI {
         userText.setBounds(100, 10, 160, 25);
         loginFrame.add(userText);
 
-        JLabel passLabel = new JLabel("Password:");
+        JLabel passLabel = new JLabel("パスワード:");
         passLabel.setBounds(10, 40, 80, 25);
         loginFrame.add(passLabel);
 
@@ -34,7 +34,7 @@ public class LoginUI {
         passText.setBounds(100, 40, 160, 25);
         loginFrame.add(passText);
 
-        JButton loginButton = new JButton("Login");
+        JButton loginButton = new JButton("ログイン");
         loginButton.setBounds(10, 80, 250, 25);
         loginFrame.add(loginButton);
 

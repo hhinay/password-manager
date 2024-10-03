@@ -9,11 +9,13 @@ public class DatabaseInitializer {
     public static void initialize() {
         try (Connection conn = DatabaseUtils.connect();
              Statement stmt = conn.createStatement()) {
-            String sql = "CREATE TABLE IF NOT EXISTS passwords (" +
-                         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                         "username TEXT NOT NULL," +
-                         "password TEXT NOT NULL)" +
-                         "note TEXT)";
+                String sql = "CREATE TABLE IF NOT EXISTS passwords (" +
+                             "username TEXT NOT NULL," +
+                             "password TEXT NOT NULL," +
+                             "note TEXT NOT NULL," +
+                             "ac TEXT NOT NULL)";
+
+   
             stmt.execute(sql);
         } catch (SQLException e) {
             e.printStackTrace();
